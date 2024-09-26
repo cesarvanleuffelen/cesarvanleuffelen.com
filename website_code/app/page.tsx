@@ -5,10 +5,11 @@ import { IoMenu } from "react-icons/io5";
 import Kpi from "./components/kpi";
 import Info from "./components/Info";
 import Socials from "./components/Socials";
+import TextBlock from "./components/TextBlock";
 
 export default function Home() {
   return (
-    <div className="min-h-screen grid grid-rows-[65fr_35fr] p-4 gap-4 overflow-hidden">
+    <div className="min-h-screen grid grid-rows-[62fr_37fr] p-4 gap-4 overflow-hidden">
       {/* Top section */}
       <div className="grid grid-cols-12 gap-4 h-full">
         {/* Top left (Quote and Metrics) */}
@@ -71,23 +72,17 @@ export default function Home() {
             </div>
 
             {/* Name, Location, Age */}
-            <div className="grid grid-rows-[auto_auto_auto_5fr] gap-4">
+            <div className="grid grid-rows-[auto_auto_5fr] gap-4">
               {/* name */}
               <div>
                 <Box>
                   <Info value="César Van Leuffelen" title="Name:"/>
                 </Box>
               </div>
-              {/* location */}
-              <div>
-                <Box>
-                  <Info value="20" title="Age:"/>
-                </Box>
-              </div>
               {/* age */}
               <div>
                 <Box>
-                  <Info value="2560 Nijlen" title="Location"/>
+                  <Info value="20" title="Age:"/>
                 </Box>
               </div>
               {/* socials */}
@@ -106,14 +101,28 @@ export default function Home() {
         {/* Bottom left (Portfolio) */}
         <div className="col-span-7">
           <Box>
-            <h2>portfolio</h2>
+            <TextBlock title="Portfolio" more="See All" url="#">
+              <div className="flex justify-around h-full">
+                <div className="bg-slate-300 w-1/4 h-2/3 rounded-xl">
+                  <p>project 1</p>
+                </div>
+                <div className="bg-slate-300 w-1/4 h-2/3 rounded-xl">
+                  <p>project 2</p>
+                </div>
+                <div className="bg-slate-300 w-1/4 h-2/3 rounded-xl">
+                  <p>project 3</p>
+                </div>
+              </div>
+            </TextBlock>
           </Box>
         </div>
 
         {/* Bottom right (About me) */}
         <div className="col-span-5">
           <Box>
-            <h2>About me</h2>
+            <TextBlock title="About" more="Resume" url="#">
+              <p></p>
+            </TextBlock>
           </Box>
         </div>
       </div>
