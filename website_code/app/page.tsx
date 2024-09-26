@@ -1,9 +1,14 @@
 import Image from "next/image";
 import Box from "./components/Box";
+import { kanit } from "./fonts/fonts";
+import { IoMenu } from "react-icons/io5";
+import Kpi from "./components/kpi";
+import Info from "./components/Info";
+import Socials from "./components/Socials";
 
 export default function Home() {
   return (
-    <div className="min-h-screen grid grid-rows-[55fr_45fr] p-4 gap-4 overflow-hidden">
+    <div className="min-h-screen grid grid-rows-[65fr_35fr] p-4 gap-4 overflow-hidden">
       {/* Top section */}
       <div className="grid grid-cols-12 gap-4 h-full">
         {/* Top left (Quote and Metrics) */}
@@ -11,27 +16,30 @@ export default function Home() {
           {/* Quote */}
           <div id="quote">
             <Box>
-              <h1>quote</h1>
+              <h2 className={kanit.className + " text-7xl"}>'You miss 100% of the shots you don't take'</h2>
+              <h2 className="text-gray-500 text-xl">- Wayne Gretzky</h2>
+              {/* let's talk button */}
+              <a className="bg-customb p-3 text-xl rounded-md absolute bottom-5 right-5">Let's talk 👋</a>
             </Box>
           </div>
           {/* 3 Metrics */}
           <div id="container2" className="grid grid-cols-3 gap-4">
             {/* green */}
             <div id="green">
-              <Box>
-                <h1>green</h1>
+              <Box bgColor="bg-customg">
+                <Kpi big="2+" description="Years Experience"/>
               </Box>
             </div>
             {/* yellow */}
             <div id="yellow">
-              <Box>
-                <h1>yellow</h1>
+              <Box bgColor="bg-customy">
+                <Kpi big="5+" description="projects"/>
               </Box>
             </div>
             {/* red */}
             <div id="red">
-              <Box>
-                <h1>red</h1>
+              <Box bgColor="bg-customr">
+                <Kpi big="4+" description="clients"/>
               </Box>
             </div>
           </div>
@@ -42,7 +50,14 @@ export default function Home() {
           {/* Navbar */}
           <div>
             <Box>
-              <h1>Navbar</h1>
+              <div className="flex justify-between items-center h-full px-2">
+                <h1 className={kanit.className + " text-xl font-bold text-gray-200"}><span className="text-customb">César</span> Van Leuffelen</h1>
+                <div className="cursor-pointer">
+                  <IoMenu
+                    size={35}
+                  />
+                </div>
+              </div>
             </Box>
           </div>
 
@@ -50,29 +65,35 @@ export default function Home() {
           <div className="grid grid-cols-2 gap-4">
             {/* Photo */}
             <div>
-              <Box bgColor="bg-custom-blue">
-                <h1>Photo</h1>
+              <Box bgColor="bg-customb">
+                <h2>Photo</h2>
               </Box>
             </div>
 
             {/* Name, Location, Age */}
-            <div className="grid grid-rows-3 gap-4">
+            <div className="grid grid-rows-[auto_auto_auto_5fr] gap-4">
               {/* name */}
               <div>
                 <Box>
-                  <h1>name</h1>
+                  <Info value="César Van Leuffelen" title="Name:"/>
                 </Box>
               </div>
               {/* location */}
               <div>
                 <Box>
-                  <h1>age</h1>
+                  <Info value="20" title="Age:"/>
                 </Box>
               </div>
               {/* age */}
               <div>
                 <Box>
-                  <h1>location</h1>
+                  <Info value="2560 Nijlen" title="Location"/>
+                </Box>
+              </div>
+              {/* socials */}
+              <div>
+                <Box>
+                  <Socials/>
                 </Box>
               </div>
             </div>
@@ -85,14 +106,14 @@ export default function Home() {
         {/* Bottom left (Portfolio) */}
         <div className="col-span-7">
           <Box>
-            <h1>portfolio</h1>
+            <h2>portfolio</h2>
           </Box>
         </div>
 
         {/* Bottom right (About me) */}
         <div className="col-span-5">
           <Box>
-            <h1>About me</h1>
+            <h2>About me</h2>
           </Box>
         </div>
       </div>

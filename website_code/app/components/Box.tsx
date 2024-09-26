@@ -7,7 +7,7 @@ interface BoxProps {
 
 function Box({ children, bgColor = 'bg-custom-dark-gray' }: BoxProps) {
   return (
-    <div className={`${bgColor} rounded-3xl min-h-20 h-full p-3`}>
+    <div className={`${bgColor} relative rounded-3xl min-h-20 h-full p-3`}>
       {children}
     </div>
   );
