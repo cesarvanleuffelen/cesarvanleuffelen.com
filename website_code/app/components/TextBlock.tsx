@@ -2,9 +2,9 @@ import React from 'react'
 import { kanit } from '../fonts/fonts';
 
 interface TextBlockProps{
-    title: string,
-    more: string,
-    url: string,
+    title?: string,
+    more?: string,
+    url?: string,
     children?: React.ReactNode,
 }
 

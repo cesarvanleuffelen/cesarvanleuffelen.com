@@ -16,6 +16,7 @@ const config: Config = {
         customy: "#ffbe3c",
         customr: "#ff6d7a",
         customgray: "#262427",
+        customselectgray: "#333134",
       },
     },
   },
