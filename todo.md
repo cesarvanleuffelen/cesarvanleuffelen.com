@@ -1,13 +1,13 @@
 # TODO lijst portfolio website
 
 - [x] responsief maken van alle pagina's
-- [] responsief maken voor tablet
-- [] probleem text wrap about
-- [] probleem footer about
-- [] probleem home klein scherm portfolio
-- [] probleem contact klein scherm footer
+- [x] responsief maken voor tablet
+- [x] probleem text wrap about
+- [x] probleem footer about
+- [x] probleem home klein scherm portfolio
+- [x] probleem contact klein scherm footer
 - [] foto maken van mij (vraag aan Amélie)
-- [] alle portfolio content uit een json bestand halen
+- [x] alle portfolio content uit een json bestand halen
 - [x] content schrijven
 - [x] socials koppelen
 - [x] contact pagina maken
